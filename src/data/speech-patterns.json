@@ -1,0 +1,167 @@
+{
+  "version": "1.0.0",
+  "description": "ToastyMills speech patterns database — simulates recognition of natural/informal speech, common misspellings, and phonetic approximations. No API required.",
+  "phoneticRules": [
+    { "id": "ph-f",    "description": "ph sounds like f",   "pattern": "ph",  "replacement": "f"  },
+    { "id": "ck-k",    "description": "ck sounds like k",   "pattern": "ck",  "replacement": "k"  },
+    { "id": "kn-n",    "description": "kn sounds like n",   "pattern": "kn",  "replacement": "n"  },
+    { "id": "wr-r",    "description": "wr sounds like r",   "pattern": "wr",  "replacement": "r"  },
+    { "id": "gh-f",    "description": "gh sounds like f",   "pattern": "ough","replacement": "uf" },
+    { "id": "ee-i",    "description": "ee sounds like long-e","pattern": "ee", "replacement": "i"  },
+    { "id": "th-d",    "description": "th sounds like d (informal)","pattern": "th","replacement": "d"},
+    { "id": "wh-w",    "description": "wh sounds like w",   "pattern": "wh",  "replacement": "w"  }
+  ],
+  "commonMisspellings": [
+    { "wrong": "recieve",      "correct": "receive" },
+    { "wrong": "beleive",      "correct": "believe" },
+    { "wrong": "wierd",        "correct": "weird" },
+    { "wrong": "freind",       "correct": "friend" },
+    { "wrong": "seperate",     "correct": "separate" },
+    { "wrong": "definately",   "correct": "definitely" },
+    { "wrong": "occured",      "correct": "occurred" },
+    { "wrong": "untill",       "correct": "until" },
+    { "wrong": "tommorow",     "correct": "tomorrow" },
+    { "wrong": "tommorrow",    "correct": "tomorrow" },
+    { "wrong": "grammer",      "correct": "grammar" },
+    { "wrong": "wich",         "correct": "which" },
+    { "wrong": "becuase",      "correct": "because" },
+    { "wrong": "becuse",       "correct": "because" },
+    { "wrong": "becaues",      "correct": "because" },
+    { "wrong": "teh",          "correct": "the" },
+    { "wrong": "hte",          "correct": "the" },
+    { "wrong": "adn",          "correct": "and" },
+    { "wrong": "nad",          "correct": "and" },
+    { "wrong": "taht",         "correct": "that" },
+    { "wrong": "thta",         "correct": "that" },
+    { "wrong": "waht",         "correct": "what" },
+    { "wrong": "whta",         "correct": "what" },
+    { "wrong": "thier",        "correct": "their" },
+    { "wrong": "reccomend",    "correct": "recommend" },
+    { "wrong": "accomodate",   "correct": "accommodate" },
+    { "wrong": "calender",     "correct": "calendar" },
+    { "wrong": "existance",    "correct": "existence" },
+    { "wrong": "independant",  "correct": "independent" },
+    { "wrong": "occassion",    "correct": "occasion" },
+    { "wrong": "persue",       "correct": "pursue" },
+    { "wrong": "harrass",      "correct": "harass" },
+    { "wrong": "millenium",    "correct": "millennium" },
+    { "wrong": "priviledge",   "correct": "privilege" },
+    { "wrong": "writting",     "correct": "writing" },
+    { "wrong": "arguement",    "correct": "argument" },
+    { "wrong": "judgement",    "correct": "judgment" },
+    { "wrong": "noticable",    "correct": "noticeable" },
+    { "wrong": "conscous",     "correct": "conscious" },
+    { "wrong": "consious",     "correct": "conscious" },
+    { "wrong": "embarras",     "correct": "embarrass" },
+    { "wrong": "embarass",     "correct": "embarrass" },
+    { "wrong": "questoin",     "correct": "question" },
+    { "wrong": "knwo",         "correct": "know" },
+    { "wrong": "konw",         "correct": "know" },
+    { "wrong": "liek",         "correct": "like" },
+    { "wrong": "jsut",         "correct": "just" },
+    { "wrong": "siad",         "correct": "said" },
+    { "wrong": "form",         "correct": "from",       "contextHint": "when followed by a verb or noun" },
+    { "wrong": "form",         "correct": "form",       "contextHint": "when meaning a form/document" },
+    { "wrong": "ther",         "correct": "there" },
+    { "wrong": "thre",         "correct": "there" },
+    { "wrong": "youre",        "correct": "you're" },
+    { "wrong": "your",         "correct": "you're",     "contextHint": "when used as a verb complement" },
+    { "wrong": "were",         "correct": "we're",      "contextHint": "when before an adjective or verb" },
+    { "wrong": "shouldnt",     "correct": "shouldn't" },
+    { "wrong": "cant",         "correct": "can't" },
+    { "wrong": "wont",         "correct": "won't" },
+    { "wrong": "dont",         "correct": "don't" },
+    { "wrong": "doesnt",       "correct": "doesn't" },
+    { "wrong": "didnt",        "correct": "didn't" },
+    { "wrong": "isnt",         "correct": "isn't" },
+    { "wrong": "arent",        "correct": "aren't" },
+    { "wrong": "wasnt",        "correct": "wasn't" },
+    { "wrong": "werent",       "correct": "weren't" },
+    { "wrong": "havent",       "correct": "haven't" },
+    { "wrong": "hasnt",        "correct": "hasn't" },
+    { "wrong": "hadnt",        "correct": "hadn't" }
+  ],
+  "flexibleIntentPatterns": [
+    {
+      "id": "greet",
+      "label": "Greeting",
+      "patterns": ["hello", "hi", "hey", "hiya", "howdy", "sup", "whats up", "what's up", "yo", "helo", "helo there", "heya", "good morning", "gm", "good afternoon", "good evening"],
+      "intent": "greeting"
+    },
+    {
+      "id": "farewell",
+      "label": "Farewell",
+      "patterns": ["bye", "goodbye", "cya", "c ya", "see ya", "see you", "later", "ttyl", "ttfn", "peace", "take care", "have a good one", "gotta go", "g2g"],
+      "intent": "farewell"
+    },
+    {
+      "id": "help_request",
+      "label": "Help Request",
+      "patterns": ["help", "help me", "i need help", "can you help", "how do i", "how to", "how do you", "what is", "what are", "explain", "tell me", "show me", "i dont understand", "i don't understand", "confused", "lost"],
+      "intent": "help_request"
+    },
+    {
+      "id": "thanks",
+      "label": "Gratitude",
+      "patterns": ["thanks", "thank you", "ty", "thx", "appreciate it", "appreciate that", "cheers", "much appreciated", "thank u", "thnx", "thnks", "thanx"],
+      "intent": "gratitude"
+    },
+    {
+      "id": "agree",
+      "label": "Agreement",
+      "patterns": ["yes", "yeah", "yep", "yup", "sure", "absolutely", "of course", "definitely", "right", "correct", "exactly", "agreed", "totally", "for sure", "ok", "okay", "k", "sounds good", "makes sense"],
+      "intent": "agreement"
+    },
+    {
+      "id": "disagree",
+      "label": "Disagreement",
+      "patterns": ["no", "nope", "nah", "not really", "i disagree", "i don't think so", "i dont think so", "wrong", "incorrect", "that's wrong", "thats wrong", "not true", "false", "negative"],
+      "intent": "disagreement"
+    },
+    {
+      "id": "ask_name",
+      "label": "Ask for Name",
+      "patterns": ["what is your name", "what's your name", "who are you", "tell me your name", "what do i call you", "what should i call you", "your name"],
+      "intent": "ask_name"
+    },
+    {
+      "id": "ask_status",
+      "label": "Ask for Status",
+      "patterns": ["how are you", "how r u", "how are u", "hows it going", "how's it going", "how do you do", "are you okay", "you alright", "u ok"],
+      "intent": "ask_status"
+    },
+    {
+      "id": "ask_capability",
+      "label": "Ask About Capability",
+      "patterns": ["what can you do", "what do you know", "what are you capable of", "show me what you can do", "what are your features", "can you", "are you able to", "is it possible"],
+      "intent": "ask_capability"
+    }
+  ],
+  "fuzzyMatchConfig": {
+    "description": "Configuration for flexible/fuzzy word matching to handle misspellings and typos.",
+    "maxEditDistance": 2,
+    "minWordLength": 4,
+    "ignoreCase": true,
+    "trimPunctuation": true,
+    "normalizeContractions": true,
+    "expandSlang": true,
+    "phonemeNormalize": false
+  },
+  "tokenizationRules": {
+    "splitOn": [" ", "\t", "\n", ",", ".", "!", "?", ";", ":"],
+    "keepWith": ["'", "-"],
+    "stripLeading": ["(", "[", "{", "\"", "'"],
+    "stripTrailing": [")", "]", "}", "\"", "'", ".", ",", "!", "?", ";", ":"]
+  },
+  "intentResponses": {
+    "greeting": "Hey there! 👋 What's on your mind?",
+    "farewell": "Take it easy! Come back whenever you need me. 🍞",
+    "gratitude": "Happy to help! That's what I'm here for. 😊",
+    "agreement": "Great, we're on the same page!",
+    "disagreement": "Fair enough — let's talk it through.",
+    "ask_name": "I'm ToastyMills — your local-first AI assistant. No API needed, just vibes and grammar.",
+    "ask_status": "Running smooth on local patterns! All systems toasty. 🔥",
+    "ask_capability": "I can chat, match patterns, recognize informal speech, correct misspellings, and respond to common phrases — all without any external API. Try me!",
+    "help_request": "I'll do my best to help! Tell me more about what you need."
+  }
+}
