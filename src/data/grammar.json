@@ -1,0 +1,235 @@
+{
+  "version": "1.0.0",
+  "description": "ToastyMills grammar database — local-first, no API required. Covers parts of speech, sentence structures, and common communication patterns.",
+  "partsOfSpeech": {
+    "nouns": {
+      "concrete": ["cat", "dog", "house", "car", "tree", "book", "phone", "computer", "table", "chair", "bread", "toast", "butter", "milk", "water", "food", "door", "window", "road", "city"],
+      "abstract": ["love", "freedom", "happiness", "truth", "knowledge", "time", "space", "idea", "thought", "feeling", "hope", "fear", "joy", "anger", "peace"],
+      "proper": ["Monday", "January", "America", "English", "ToastyMills"],
+      "collective": ["team", "group", "family", "crowd", "flock", "bunch", "set", "pack", "herd", "class"]
+    },
+    "pronouns": {
+      "personal_subject": ["I", "you", "he", "she", "it", "we", "they"],
+      "personal_object": ["me", "you", "him", "her", "it", "us", "them"],
+      "possessive": ["my", "your", "his", "her", "its", "our", "their"],
+      "reflexive": ["myself", "yourself", "himself", "herself", "itself", "ourselves", "themselves"],
+      "demonstrative": ["this", "that", "these", "those"],
+      "interrogative": ["who", "whom", "whose", "which", "what"],
+      "relative": ["who", "whom", "whose", "which", "that"],
+      "indefinite": ["anyone", "someone", "everyone", "no one", "anything", "something", "everything", "nothing"]
+    },
+    "verbs": {
+      "action": ["run", "walk", "jump", "eat", "drink", "read", "write", "speak", "listen", "think", "make", "take", "give", "get", "go", "come", "know", "see", "look", "use"],
+      "linking": ["is", "are", "was", "were", "be", "been", "being", "seem", "appear", "feel", "become", "remain", "look", "sound", "taste", "smell"],
+      "auxiliary": ["will", "would", "shall", "should", "may", "might", "can", "could", "must", "ought", "do", "does", "did", "have", "has", "had"],
+      "irregular": {
+        "go": ["goes", "went", "gone", "going"],
+        "be": ["is", "are", "was", "were", "been", "being"],
+        "have": ["has", "had", "having"],
+        "do": ["does", "did", "done", "doing"],
+        "say": ["says", "said", "saying"],
+        "get": ["gets", "got", "gotten", "getting"],
+        "make": ["makes", "made", "making"],
+        "know": ["knows", "knew", "known", "knowing"],
+        "think": ["thinks", "thought", "thinking"],
+        "see": ["sees", "saw", "seen", "seeing"],
+        "come": ["comes", "came", "come", "coming"],
+        "take": ["takes", "took", "taken", "taking"]
+      }
+    },
+    "adjectives": {
+      "descriptive": ["big", "small", "fast", "slow", "hot", "cold", "new", "old", "good", "bad", "happy", "sad", "bright", "dark", "loud", "quiet", "hard", "soft", "clean", "dirty"],
+      "quantity": ["many", "few", "some", "any", "all", "most", "several", "both", "each", "every", "no"],
+      "demonstrative": ["this", "that", "these", "those"],
+      "interrogative": ["which", "what", "whose"],
+      "ordinal": ["first", "second", "third", "last", "next", "previous"]
+    },
+    "adverbs": {
+      "manner": ["quickly", "slowly", "carefully", "easily", "well", "badly", "hard", "fast", "loudly", "quietly", "suddenly", "gently"],
+      "time": ["now", "then", "today", "yesterday", "tomorrow", "soon", "already", "still", "just", "never", "always", "often", "sometimes", "usually", "recently"],
+      "place": ["here", "there", "everywhere", "nowhere", "somewhere", "up", "down", "in", "out", "away", "back", "inside", "outside", "nearby"],
+      "degree": ["very", "quite", "rather", "too", "enough", "almost", "nearly", "just", "only", "even", "really", "extremely", "barely", "hardly"]
+    },
+    "prepositions": ["in", "on", "at", "by", "for", "with", "about", "against", "between", "into", "through", "during", "before", "after", "above", "below", "from", "to", "of", "off", "over", "under", "around", "near", "behind", "beside", "along", "toward"],
+    "conjunctions": {
+      "coordinating": ["for", "and", "nor", "but", "or", "yet", "so"],
+      "subordinating": ["after", "although", "as", "because", "before", "if", "since", "though", "unless", "until", "when", "where", "while", "whereas"],
+      "correlative": ["both...and", "either...or", "neither...nor", "not only...but also", "whether...or"]
+    },
+    "articles": {
+      "definite": ["the"],
+      "indefinite": ["a", "an"]
+    },
+    "interjections": ["oh", "wow", "hey", "hi", "hello", "ouch", "oops", "yes", "no", "well", "hmm", "ugh", "yay", "whoa", "huh"]
+  },
+  "sentenceStructures": {
+    "basic": [
+      {
+        "id": "SV",
+        "name": "Subject + Verb",
+        "pattern": ["SUBJECT", "VERB"],
+        "example": "Dogs run."
+      },
+      {
+        "id": "SVO",
+        "name": "Subject + Verb + Object",
+        "pattern": ["SUBJECT", "VERB", "OBJECT"],
+        "example": "She reads books."
+      },
+      {
+        "id": "SVA",
+        "name": "Subject + Verb + Adjective",
+        "pattern": ["SUBJECT", "LINKING_VERB", "ADJECTIVE"],
+        "example": "The bread is warm."
+      },
+      {
+        "id": "SVOO",
+        "name": "Subject + Verb + Indirect Object + Direct Object",
+        "pattern": ["SUBJECT", "VERB", "INDIRECT_OBJECT", "DIRECT_OBJECT"],
+        "example": "She gave him the toast."
+      },
+      {
+        "id": "SVOC",
+        "name": "Subject + Verb + Object + Complement",
+        "pattern": ["SUBJECT", "VERB", "OBJECT", "COMPLEMENT"],
+        "example": "They called her brilliant."
+      }
+    ],
+    "questions": [
+      {
+        "id": "YES_NO",
+        "name": "Yes/No Question",
+        "pattern": ["AUX_VERB", "SUBJECT", "VERB"],
+        "example": "Do you know?"
+      },
+      {
+        "id": "WH_QUESTION",
+        "name": "Wh- Question",
+        "pattern": ["WH_WORD", "AUX_VERB", "SUBJECT", "VERB"],
+        "example": "What did she say?"
+      },
+      {
+        "id": "SUBJECT_QUESTION",
+        "name": "Subject Question",
+        "pattern": ["WH_WORD", "VERB"],
+        "example": "Who knows?"
+      }
+    ]
+  },
+  "commonPhrases": {
+    "greetings": [
+      { "phrase": "hello", "intent": "greeting", "response": "hi" },
+      { "phrase": "hi", "intent": "greeting", "response": "hello" },
+      { "phrase": "hey", "intent": "greeting", "response": "hey there" },
+      { "phrase": "good morning", "intent": "greeting", "response": "good morning" },
+      { "phrase": "good afternoon", "intent": "greeting", "response": "good afternoon" },
+      { "phrase": "good evening", "intent": "greeting", "response": "good evening" },
+      { "phrase": "how are you", "intent": "status_check", "response": "doing well" },
+      { "phrase": "what's up", "intent": "greeting", "response": "not much" },
+      { "phrase": "whats up", "intent": "greeting", "response": "not much" }
+    ],
+    "farewells": [
+      { "phrase": "bye", "intent": "farewell" },
+      { "phrase": "goodbye", "intent": "farewell" },
+      { "phrase": "see you", "intent": "farewell" },
+      { "phrase": "see ya", "intent": "farewell" },
+      { "phrase": "later", "intent": "farewell" },
+      { "phrase": "good night", "intent": "farewell" },
+      { "phrase": "take care", "intent": "farewell" },
+      { "phrase": "talk soon", "intent": "farewell" }
+    ],
+    "acknowledgements": [
+      { "phrase": "okay", "intent": "ack" },
+      { "phrase": "ok", "intent": "ack" },
+      { "phrase": "sure", "intent": "ack" },
+      { "phrase": "alright", "intent": "ack" },
+      { "phrase": "got it", "intent": "ack" },
+      { "phrase": "understood", "intent": "ack" },
+      { "phrase": "makes sense", "intent": "ack" },
+      { "phrase": "sounds good", "intent": "ack" },
+      { "phrase": "cool", "intent": "ack" }
+    ],
+    "requests": [
+      { "phrase": "can you", "intent": "request" },
+      { "phrase": "could you", "intent": "request" },
+      { "phrase": "please", "intent": "polite_request" },
+      { "phrase": "help me", "intent": "help_request" },
+      { "phrase": "show me", "intent": "demo_request" },
+      { "phrase": "tell me", "intent": "info_request" },
+      { "phrase": "explain", "intent": "explain_request" }
+    ]
+  },
+  "contractions": {
+    "I'm": "I am",
+    "I've": "I have",
+    "I'll": "I will",
+    "I'd": "I would",
+    "you're": "you are",
+    "you've": "you have",
+    "you'll": "you will",
+    "you'd": "you would",
+    "he's": "he is",
+    "she's": "she is",
+    "it's": "it is",
+    "we're": "we are",
+    "we've": "we have",
+    "we'll": "we will",
+    "we'd": "we would",
+    "they're": "they are",
+    "they've": "they have",
+    "they'll": "they will",
+    "they'd": "they would",
+    "can't": "cannot",
+    "won't": "will not",
+    "don't": "do not",
+    "doesn't": "does not",
+    "didn't": "did not",
+    "isn't": "is not",
+    "aren't": "are not",
+    "wasn't": "was not",
+    "weren't": "were not",
+    "haven't": "have not",
+    "hasn't": "has not",
+    "hadn't": "had not",
+    "shouldn't": "should not",
+    "wouldn't": "would not",
+    "couldn't": "could not",
+    "mustn't": "must not",
+    "that's": "that is",
+    "there's": "there is",
+    "what's": "what is",
+    "who's": "who is",
+    "it'll": "it will",
+    "let's": "let us"
+  },
+  "slangAndInformal": {
+    "gonna": "going to",
+    "wanna": "want to",
+    "gotta": "got to",
+    "kinda": "kind of",
+    "sorta": "sort of",
+    "lotta": "lot of",
+    "outta": "out of",
+    "dunno": "do not know",
+    "gimme": "give me",
+    "lemme": "let me",
+    "ya": "you",
+    "yep": "yes",
+    "nope": "no",
+    "yall": "you all",
+    "y'all": "you all",
+    "cause": "because",
+    "'cause": "because",
+    "cuz": "because",
+    "tbh": "to be honest",
+    "imo": "in my opinion",
+    "idk": "I do not know",
+    "ngl": "not gonna lie",
+    "btw": "by the way",
+    "omg": "oh my goodness",
+    "lol": "laughing",
+    "brb": "be right back",
+    "irl": "in real life",
+    "asap": "as soon as possible"
+  }
+}

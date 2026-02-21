@@ -1,0 +1,56 @@
+{
+  "chats": [
+    {
+      "id": "chat-1",
+      "title": "Welcome to ToastyMills",
+      "messages": [
+        {
+          "id": "m1",
+          "role": "system",
+          "content": "ToastyMills local-first workspace initialized. Front-end simulation with mock responses and grammar engine active.",
+          "createdAt": "2026-01-01T00:00:00.000Z"
+        },
+        {
+          "id": "m2",
+          "role": "assistant",
+          "content": "Hey! I'm ToastyMills — your locally-run AI chat. Ask me anything or try a quick action below. No API needed yet — I'm running on local grammar patterns!",
+          "createdAt": "2026-01-01T00:00:00.000Z"
+        }
+      ]
+    }
+  ],
+  "quickActions": ["Explain", "Summarize", "Rewrite", "Code", "Plan"],
+  "scripts": [
+    {
+      "id": "coding-react",
+      "label": "Coding / React Pattern",
+      "keywords": ["code", "react", "component", "function", "typescript"],
+      "responseTemplate": "Here's a mock {{presetLower}} response in **{{mode}}** mode.\n\n```tsx\nfunction ToastyMills() {\n  return <div>Hello from ToastyMills 🍞</div>;\n}\n```\n\nOnce we wire a backend, this panel can stream real model output."
+    },
+    {
+      "id": "security-pgp",
+      "label": "Security / PGP Pattern",
+      "keywords": ["security", "pgp", "encrypt", "password", "auth"],
+      "responseTemplate": "Good direction. A security-focused workflow should prioritize:\n\n- clear threat boundaries\n- client-side handling for secrets where possible\n- challenge-response auth for sign-in\n- audit logs for sensitive actions\n\nThis is a simulated response from the ToastyMills front-end shell."
+    },
+    {
+      "id": "math-tutor",
+      "label": "Math / Teaching Pattern",
+      "keywords": ["math", "teach", "learn", "explain", "calculate"],
+      "responseTemplate": "A math tutor mode could support **Explain**, **Hint**, and **Check My Work** flows.\n\nSince this is the UI-first build, we're validating interaction patterns before wiring a model."
+    },
+    {
+      "id": "grammar-help",
+      "label": "Grammar / Writing Pattern",
+      "keywords": ["grammar", "write", "sentence", "word", "spell"],
+      "responseTemplate": "The grammar engine is active locally! I can recognize:\n\n- **Parts of speech** (nouns, verbs, adjectives…)\n- **Sentence structures** (subject-verb-object)\n- **Flexible patterns** even if you misspell something\n\nThis runs entirely from local JSON — no API needed."
+    },
+    {
+      "id": "speech-demo",
+      "label": "Speech / Voice Pattern",
+      "keywords": ["speech", "voice", "speak", "listen", "hear", "talk"],
+      "responseTemplate": "The simulated speech recognizer is ready! It maps phonetic patterns and fuzzy matches to understand what you're saying, even with typos or informal phrasing.\n\nAll pattern data lives in `speech-patterns.json` — no cloud service required."
+    }
+  ],
+  "defaultResponseTemplate": "Mock response from **ToastyMills** in **{{mode}}** mode using the **{{preset}}** preset.\n\nYou said: _{{input}}_\n\nNext step: attach a backend endpoint (local/Ollama or cloud) and stream real responses into this thread."
+}
