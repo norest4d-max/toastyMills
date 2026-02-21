@@ -8,13 +8,85 @@
 
 ---
 
-## Getting Started
+## 🖥️ Installation — Get It Running on Your Device
+
+### Step 1 — Install the prerequisites
+
+You need **Node.js** (which includes `npm`) and **Git** installed once on your machine.
+
+| Tool | Download |
+|---|---|
+| Node.js (LTS) | https://nodejs.org — click **"LTS"** and run the installer |
+| Git | https://git-scm.com/downloads |
+
+> **On Windows?** Use **WSL (Windows Subsystem for Linux)** — it's the smoothest experience.
+> Open **PowerShell as Administrator** and run:
+> ```powershell
+> wsl --install
+> ```
+> Restart your PC when prompted. Then open the **Ubuntu** app from the Start menu and continue with the Linux steps below.
+> Node.js inside WSL: paste this into the Ubuntu terminal:
+> ```bash
+> curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+> sudo apt-get install -y nodejs
+> ```
+
+---
+
+### Step 2 — Download the repo
+
+Open your terminal (**WSL / Ubuntu** on Windows, **Terminal** on Mac, **bash** on Linux) and run:
+
+```bash
+git clone https://github.com/norest4d-max/toastyMills.git
+```
+
+Then move into the project folder:
+
+```bash
+cd toastyMills
+```
+
+---
+
+### Step 3 — Install dependencies
 
 ```bash
 npm install
-npm start        # development server → http://localhost:3000
-npm run build    # production build
-npm test         # run tests
+```
+
+This downloads everything the app needs (takes ~30 seconds the first time).
+
+---
+
+### Step 4 — Launch the app
+
+```bash
+npm start
+```
+
+Your browser will open automatically at **http://localhost:3000** 🎉
+
+If it doesn't open on its own, just paste `http://localhost:3000` into your browser.
+
+---
+
+### Quick-reference (all four commands in order)
+
+```bash
+git clone https://github.com/norest4d-max/toastyMills.git
+cd toastyMills
+npm install
+npm start
+```
+
+---
+
+### Other useful commands
+
+```bash
+npm run build    # create an optimised production build in /build
+npm test         # run the test suite
 ```
 
 ---
