@@ -1,0 +1,121 @@
+.container {
+  padding: 1rem;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.searchInput:focus {
+  border-color: #6366f1;
+}
+
+.count {
+  font-size: 0.85rem;
+  color: #64748b;
+  white-space: nowrap;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.6rem;
+}
+
+.word {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1e293b;
+  text-transform: capitalize;
+}
+
+.badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: #e2e8f0;
+  color: #475569;
+}
+
+.badge.abstract { background: #ede9fe; color: #7c3aed; }
+.badge.emotion  { background: #fce7f3; color: #be185d; }
+.badge.nature   { background: #dcfce7; color: #15803d; }
+.badge.action   { background: #fef9c3; color: #a16207; }
+.badge.cognitive { background: #dbeafe; color: #1d4ed8; }
+
+.definition {
+  font-size: 0.9rem;
+  color: #475569;
+  margin: 0.4rem 0 0.8rem;
+  line-height: 1.5;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  align-items: center;
+  margin-top: 0.4rem;
+}
+
+.chipsLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #64748b;
+  margin-right: 0.2rem;
+}
+
+.chip {
+  font-size: 0.75rem;
+  background: #f1f5f9;
+  color: #334155;
+  border-radius: 6px;
+  padding: 0.15rem 0.5rem;
+}
+
+.chip.antonym {
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.empty {
+  text-align: center;
+  color: #94a3b8;
+  padding: 3rem 0;
+  font-size: 1rem;
+}
