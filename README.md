@@ -2,6 +2,14 @@
 
 **ToastyMills** is a local-first React chat UI powered by **local Ollama** (GPU if your Ollama install uses it).
 
+## Branch note (read this before changing defaults)
+
+- `main` is kept for compatibility (some forks/PRs may target it).
+- `clean-main` is a clean-history branch that points at the same code without the extra history-merge commit.
+
+If GitHub warns that changing the default branch “may affect pull requests”, that’s normal: it mostly impacts which branch new PRs target by default.
+To avoid disruption, either keep `main` as the default, or switch the default to `clean-main` and retarget any open PRs if needed.
+
 It includes:
 - Chat sessions (left sidebar)
 - Prompt Library (ready-to-use prompts + add/edit)
